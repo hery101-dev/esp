@@ -1,0 +1,392 @@
+/*** 
+
+====================================================================
+                        Home-Page
+====================================================================
+
+***/
+
+
+/** main header area **/
+
+.main-header {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    z-index: 999;
+    width: 100%;
+    transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -webkit-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+}
+
+.sticky-header {
+    position: fixed;
+    opacity: 0;
+    visibility: hidden;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    background: #fff;
+    z-index: 0;
+    box-shadow: 0 0px 0 2px rgba(238, 238, 238, 0.66);
+    transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -webkit-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+}
+
+.fixed-header .sticky-header {
+    z-index: 999;
+    opacity: 1;
+    visibility: visible;
+    -ms-animation-name: fadeInDown;
+    -moz-animation-name: fadeInDown;
+    -op-animation-name: fadeInDown;
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+    -ms-animation-duration: 500ms;
+    -moz-animation-duration: 500ms;
+    -op-animation-duration: 500ms;
+    -webkit-animation-duration: 500ms;
+    animation-duration: 500ms;
+    -ms-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+    -op-animation-timing-function: linear;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -ms-animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1;
+    -op-animation-iteration-count: 1;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}
+
+.sticky-header .main-menu .navigation>li>a {
+    padding: 27px 0px 22px 12px;
+}
+
+.sticky-header .logo-box {
+    margin-top: 5px;
+}
+
+.sticky-header .main-menu .navbar-collapse>ul li.dropdown .dropdown-btn {
+    top: 25px;
+}
+
+.header-lower {
+    background: #fff;
+    width: 100%;
+    z-index: 999;
+    opacity: 1;
+    visibility: visible;
+    transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -webkit-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+}
+
+.header-upper {
+    position: relative;
+    background: #232428;
+    width: 100%;
+    padding: 9px 0px;
+}
+
+.header-upper .top-left {
+    position: relative;
+    display: inline-block;
+}
+
+.header-upper .top-left li {
+    position: relative;
+    display: inline-block;
+    font-size: 13px;
+    color: #d3d7ce;
+    top: 1px;
+    margin-right: 45px;
+}
+
+.header-upper .top-left li:before {
+    position: absolute;
+    content: "";
+    background: #656669;
+    width: 1px;
+    height: 20px;
+    right: -30px;
+    top: 3px;
+}
+
+.header-upper .top-left li:last-child:before {
+    display: none;
+}
+
+.header-upper .top-left li i:before {
+    font-size: 14px;
+    margin-right: 7px;
+}
+
+.header-upper .top-right {
+    position: relative;
+    float: right;
+}
+
+.header-upper .top-right .social-top {
+    position: relative;
+    display: inline-block;
+    margin-left: 16px;
+    top: 1px;
+}
+
+.header-upper .top-right .social-top li a {
+    position: relative;
+    display: inline-block;
+    color: #cfcfcf;
+    line-height: 26px;
+    font-size: 14px;
+}
+
+.header-upper .top-right .social-top li a:hover {
+    color: #337ab7;
+}
+
+.header-upper .top-right .social-top li {
+    position: relative;
+    display: inline-block;
+    margin: 0px 0px 0px 26px;
+}
+
+.main-header .info-box {
+    position: relative;
+    display: inline-block;
+}
+
+.main-header .menu-bar {
+    position: relative;
+    float: right;
+    right: 2px;
+}
+
+.header-upper .search-box-area .search-toggle i:before {
+    font-size: 14px;
+    color: #cfcfcf;
+    margin: 0px;
+    transition: all 500ms ease;
+}
+
+.header-upper .search-box-area .search-toggle:hover i:before {
+    color: #337ab7;
+    transition: all 500ms ease;
+}
+
+.header-upper .search-box-area {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    margin-right: -8px;
+    top: 1px;
+}
+
+.header-upper .search-box-area:before {
+    position: absolute;
+    content: "";
+    background: #656669;
+    width: 1px;
+    height: 20px;
+    top: 3px;
+    right: -21px;
+}
+
+.header-upper .search-box-area .search-box {
+    opacity: 0;
+    position: absolute;
+    right: 0px;
+    top: 35px;
+    transition: all 500ms ease;
+    visibility: hidden;
+}
+
+.header-upper .search-box-area .form-group {
+    position: relative;
+}
+
+.header-upper .search-box-area .form-group button {
+    position: absolute;
+    top: 2px;
+    right: 0px;
+    width: 46px;
+    height: 46px;
+    color: #fff;
+    background: #337ab7;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: none;
+    z-index: 10;
+}
+
+.header-upper .search-box-area input {
+    width: 250px;
+    height: 50px;
+    border: 2px solid #337ab7;
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 9;
+}
+
+.search-box-area .search-box.now-visible {
+    top: 35px;
+    right: 0px;
+    opacity: 1;
+    visibility: visible;
+    z-index: 9;
+    transition: all 500ms ease;
+}
+
+.main-menu {
+    position: relative;
+    display: inline-block;
+    right: 32px;
+}
+
+.sticky-header .main-menu {
+    right: 25px;
+}
+
+.menu-bar .btn-box {
+    position: relative;
+    display: inline-block;
+    right: -2px;
+    top: -3px;
+}
+
+.main-menu .navbar-collapse {
+    padding: 0px;
+}
+
+.main-menu .navigation {
+    position: relative;
+    margin: 0px;
+}
+
+.main-menu .navigation>li {
+    position: relative;
+    display: inline-block;
+    margin-left: 36px;
+}
+
+.main-menu .navigation>li>a>i:before {
+    margin-right: 5px;
+    font-size: 16px;
+}
+
+.main-menu .navigation>li>a {
+    position: relative;
+    display: block;
+    font-size: 16px;
+    color: #222;
+    line-height: 26px;
+    padding: 42px 0px 42px 12px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    opacity: 1;
+    -webkit-transition: all 500ms ease;
+}
+
+.main-menu .navigation>li:hover>a,
+.main-menu .navigation>li.current>a,
+.main-menu .navbar-collapse>ul li.dropdown:hover .dropdown-btn span:before,
+.main-menu .navbar-collapse>ul li.dropdown.current .dropdown-btn span:before {
+    color: #337ab7;
+    transition: all 500ms ease;
+}
+
+.main-menu .navigation>li:hover>a:after {
+    opacity: 1;
+}
+
+.main-menu .navigation>li>ul {
+    position: absolute;
+    left: 0px;
+    top: 130%;
+    margin-top: 0px;
+    width: 220px;
+    padding: 0px;
+    z-index: 100;
+    display: none;
+    background: #222;
+    border-top: 3px solid #337ab7;
+    transition: all 1000ms ease;
+    -moz-transition: all 1000ms ease;
+    -webkit-transition: all 1000ms ease;
+    -ms-transition: all 1000ms ease;
+    -o-transition: all 1000ms ease;
+}
+
+.main-menu .navigation>li>ul>li {
+    position: relative;
+    width: 100%;
+}
+
+.main-menu .navigation>li>ul>li:last-child {
+    border-bottom: none;
+}
+
+.main-menu .navigation>li>ul>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    line-height: 28px;
+    font-weight: 600;
+    font-size: 14px;
+    font-family: "Open Sans", sans-serif;
+    text-transform: capitalize;
+    color: #ffffff;
+    border-bottom: 1px solid #337ab7;
+    transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -webkit-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+}
+
+.main-menu .navigation>li>ul>li:last-child>a {
+    border-bottom: none;
+}
+
+.main-menu .navigation>li>ul>li:hover>a {
+    color: #337ab7;
+    padding: 10px 15px 10px 17px;
+    transition: all 500ms ease;
+}
+
+.main-menu .navigation>li>ul>li.dropdown:hover>a:after {
+    color: #ffffff;
+    transition: all 500ms ease;
+}
+
+.main-menu .navigation>li.dropdown:hover>ul {
+    visibility: visible;
+    opacity: 1;
+    top: 100%;
+    transition: all 500ms ease;
+}
+
+.main-menu .navbar-collapse>ul li.dropdown .dropdown-btn {
+    display: inline-block;
+    position: absolute;
+    top: 42px;
+    right: -15px;
+    cursor: pointer;
+}
+
+.main-menu .navbar-collapse>ul li.dropdown .dropdown-btn span:before {
+    color: #222;
+    font-size: 14px;
+}
+
+
+/* Content contenair fluid*/
